@@ -82,7 +82,7 @@ const server = http.createServer((req, res) => {
     req.headers['user-agent'] &&
     !req.headers['user-agent'].includes('curl')
   ) {
-    res.writeHead(302, { Location: 'https://github.com/hugomd/parrot.live' });
+    res.writeHead(302, { Location: 'https://github.com/withfig/valentines' });
     return res.end();
   }
 
@@ -97,7 +97,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const port = process.env.PARROT_PORT || 3000;
+const port = process.env.PORT || 3001;
 server.listen(port, err => {
   if (err) throw err;
   console.log(`Listening on localhost:${port}`);
